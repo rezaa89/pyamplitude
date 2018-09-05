@@ -18,7 +18,7 @@ class Segment(object):
         "less", "less or equal", "greater", "greater or equal", "set is",
         "set is not"]
 
-        if isinstance(prop, types.StringTypes) and isinstance(op, types.StringTypes) and isinstance(values, types.ListType):
+        if True:
            self.filters.append({'prop':prop, 'op':op, 'values':values})
            return True
         else:
