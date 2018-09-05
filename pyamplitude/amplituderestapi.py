@@ -110,7 +110,6 @@ class AmplitudeRestApi(object):
     def _make_request(self, url):
         """ Each AmplitudeRestAPI method return data by using _make_request"""
         try:
-            print(url);
             response = requests.get(url, auth=(self.project_handler.api_key,
                                                self.project_handler.secret_key))
 
@@ -241,7 +240,7 @@ class AmplitudeRestApi(object):
         if group_by is not None:
             for prop in group_by:
                 url += '&g=' + str(prop)
-
+        print('The api_url is : ', url);
         api_response = self._make_request(url)
 
         return api_response
