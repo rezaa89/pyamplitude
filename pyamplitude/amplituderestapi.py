@@ -202,7 +202,7 @@ class AmplitudeRestApi(object):
                 series:	 An array with one element which is itself an array that
                 contains the average session length for each day.
         """
-
+        print(' Call get_active_and_new_user_count ');
         if segment_definitions is None and group_by is not None:
             raise ValueError('Pyamplitude Error: Segment_definition & group_by must be defined...')
 
