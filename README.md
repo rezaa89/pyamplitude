@@ -44,7 +44,7 @@ Lets instance the ProjectHanlder with our first app called 'BubbleWay'...
 ```python
 bubbleConector = ProjectsHandler(project_name = 'BubbleWay',
                                  api_key      = <'API-KEY'>,
-                                 api_secret   = <'API-SECRET'>)
+                                 secret_key   = <'API-SECRET'>)
 ```
 
 Hint: Use the __repr__ method to check your actual instance when used with several apps.
@@ -76,13 +76,13 @@ apiconector = AmplitudeRestApi(project_handler = bubbleConector,
 
 Segments are represented as JSON arrays, where each element is a JSON object corresponding to a filter condition. First import and initialize the Segment class and add each query filter. in these cases we will be creating two segment definitions and for later use.
 
+```python
+from pyamplitude.apiresources import Segment
 first_segment_definition = Segment()
-
 first_segment_definition.add_filter(prop='country',op='is',values=['argentina','brasil'])
-
 second_segment_definition = Segment()
-
 second_segment_definition.add_filter(prop='country',op='is',values=['argentina','paraguay'])
+```
 
 ### Using the AmplitudeRestApi module.
 
