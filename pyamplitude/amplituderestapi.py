@@ -110,6 +110,7 @@ class AmplitudeRestApi(object):
     def _make_request(self, url):
         """ Each AmplitudeRestAPI method return data by using _make_request"""
         try:
+            print(url);
             response = requests.get(url, auth=(self.project_handler.api_key,
                                                self.project_handler.secret_key))
 
